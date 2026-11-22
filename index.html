@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mis cuentas</title>
+  <meta name="description" content="Gastos y ahorros personales. Tus datos no salen del teléfono.">
+  <meta name="theme-color" content="#f2f2f7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <!-- iPhone: app a pantalla completa al añadirla a la pantalla de inicio -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Mis cuentas">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" href="icons/icon-192.png" type="image/png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div id="arranque" class="arranque">Cargando…</div>
+  <main id="vista" class="vista" aria-live="polite"></main>
+  <button id="fab" class="fab" type="button" aria-label="Apuntar movimiento" hidden>＋</button>
+  <nav id="tabs" class="tabs" hidden>
+    <a href="#/inicio" data-ruta="inicio"><span>🏠</span>Inicio</a>
+    <a href="#/movimientos" data-ruta="movimientos"><span>📋</span>Movimientos</a>
+    <a href="#/analisis" data-ruta="analisis"><span>📊</span>Gastos</a>
+    <a href="#/metas" data-ruta="metas"><span>🎯</span>Metas</a>
+    <a href="#/ajustes" data-ruta="ajustes"><span>⚙️</span>Ajustes</a>
+  </nav>
+  <div id="toasts" class="toasts" role="status"></div>
+
+  <noscript>Esta app necesita JavaScript.</noscript>
+  <script src="vendor/sql-wasm.js"></script>
+  <script type="module" src="src/ui/main.js"></script>
+</body>
+</html>
